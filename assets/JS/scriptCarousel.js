@@ -98,30 +98,25 @@ var dogImageRandom = document.getElementById("dogImageRandom");
 function getRandomDogImage() {
   var randomDogImageApiUrl = "https://dog.ceo/api/breeds/image/random";
   // console.log(randomImageApiUrl);
-
-  // we are using fetch api to make rest api calls.
-  // we are also using promises here.
   fetch(randomDogImageApiUrl)
     .then(function (response) {
-      // we get raw response. need to first convert it into json format so we can use the data easily
       return response.json();
     })
-    //write for loop here, image p1 anchor, dynamically create new div - see if 5 are created, start small
+    //write for loop here, image p1 anchor, dynamically create new div - see if 5 are created, start small (could not do it, found another way)
     .then(function (json) {
-      // now we got the json . we can use this to update any data in html
       console.log(json);
       var imageUrl = json.message;
-      //update the image with new random url
+      //update the image with new random dog
       dogImageRandom.src = imageUrl;
     })
     .catch(function (error) {
-      // if any error occurs like no internet connection then this callback will be called
+      // catch errors
       console.log(error);
     });
 }
 
-//call the getRandomImage function whenever page loads
-//BUT NEED to get new IMAGE when clicking next button
+//call the getRandomDogImage function whenever page loads
+//BUT NEED to get new IMAGE when clicking next button, fixed it by manually resetting
 getRandomDogImage();
 
 //I am having trouble figuring out appending the div and constructing everything with the for loop. I just need to go back and do a lot of those exercises. But for now, I am doing this in a way I can figure out that is still calling to the API and meets requirements. This fix involves creating a number of slides and running pretty much the same function to get a random image. Let's see if I can actually figure it out. -- Yay, I did.
@@ -133,29 +128,22 @@ function getRandomDogImage1() {
   var randomDogImageApiUrl = "https://dog.ceo/api/breeds/image/random";
   // console.log(randomImageApiUrl);
 
-  // we are using fetch api to make rest api calls.
-  // we are also using promises here.
   fetch(randomDogImageApiUrl)
     .then(function (response) {
-      // we get raw response. need to first convert it into json format so we can use the data easily
       return response.json();
     })
-    //write for loop here, image p1 anchor, dynamically create new div - see if 5 are created, start small
+
     .then(function (json) {
-      // now we got the json . we can use this to update any data in html
       console.log(json);
       var imageUrl = json.message;
-      //update the image with new random url
+
       dogImageRandom1.src = imageUrl;
     })
     .catch(function (error) {
-      // if any error occurs like no internet connection then this callback will be called
       console.log(error);
     });
 }
 
-//call the getRandomImage function whenever page loads
-//BUT try to get new IMAGE when clicking next button
 getRandomDogImage1();
 
 //Function2
@@ -165,29 +153,22 @@ function getRandomDogImage2() {
   var randomDogImageApiUrl = "https://dog.ceo/api/breeds/image/random";
   // console.log(randomImageApiUrl);
 
-  // we are using fetch api to make rest api calls.
-  // we are also using promises here.
   fetch(randomDogImageApiUrl)
     .then(function (response) {
-      // we get raw response. need to first convert it into json format so we can use the data easily
       return response.json();
     })
-    //write for loop here, image p1 anchor, dynamically create new div - see if 5 are created, start small
+
     .then(function (json) {
-      // now we got the json . we can use this to update any data in html
       console.log(json);
       var imageUrl = json.message;
-      //update the image with new random url
+
       dogImageRandom2.src = imageUrl;
     })
     .catch(function (error) {
-      // if any error occurs like no internet connection then this callback will be called
       console.log(error);
     });
 }
 
-//call the getRandomImage2 function whenever page loads
-//BUT try to get new IMAGE when clicking next button
 getRandomDogImage2();
 
 //Function3
@@ -197,27 +178,20 @@ function getRandomDogImage3() {
   var randomDogImageApiUrl = "https://dog.ceo/api/breeds/image/random";
   // console.log(randomImageApiUrl);
 
-  // we are using fetch api to make rest api calls.
-  // we are also using promises here.
   fetch(randomDogImageApiUrl)
     .then(function (response) {
-      // we get raw response. need to first convert it into json format so we can use the data easily
       return response.json();
     })
-    //write for loop here, image p1 anchor, dynamically create new div - see if 5 are created, start small
+
     .then(function (json) {
-      // now we got the json . we can use this to update any data in html
       console.log(json);
       var imageUrl = json.message;
-      //update the image with new random url
+
       dogImageRandom3.src = imageUrl;
     })
     .catch(function (error) {
-      // if any error occurs like no internet connection then this callback will be called
       console.log(error);
     });
 }
 
-//call the getRandomImage2 function whenever page loads
-//BUT try to get new IMAGE when clicking next button
 getRandomDogImage3();
